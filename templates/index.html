@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Land Slide Detection</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Inline CSS for specific modifications */
+      body {
+        background-size: cover;
+        background-position: center;
+      }
+
+      header {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        text-align: center;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .button {
+        background-color: rgba(131, 33, 5, 255); /* Updated button color */
+        border: 2px solid rgba(131, 33, 5, 255); /* Border to match button color */
+      }
+
+      .button:hover {
+        background-color: #a0280c;
+        border: 2px solid #a0280c; /* Change border on hover */
+      }
+
+      .result-image {
+        border: 5px solid rgba(131, 33, 5, 255); /* Green border around the image */
+      }
+
+      .form-container {
+        background-color: rgba(171, 171, 171, 0.85);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 35%;
+        margin: 0 auto; /* Center the form container */
+        text-align: center;
+      }
+
+      .welcome-container {
+        background-color: none; /* White background for form container */
+        padding: 0;
+        color: rgb(20, 20, 20);
+        border-radius: 8px;
+        max-width: 35%;
+        margin: 0 auto; /* Center the form container and add margin */
+        text-align: center;
+        opacity: 100%;
+        margin-bottom: 4%;
+      }
+      .welcome-container h1 {
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <div class="container">
+            <ul class="nav-list1">
+              <li>
+                <p style="color: white; margin: 0; font-size: 20px">
+                  Land Slide Detection
+                </p>
+              </li>
+            </ul>
+            <ul class="nav-list">
+              <li>
+                <a
+                  href="{{ url_for('about') }}"
+                  class="nav-link"
+                  style="font-size: 20px"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{{ url_for('contact') }}"
+                  class="nav-link"
+                  style="font-size: 20px"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="welcome-container">
+          <h1>Welcome to Land Slide Detection</h1>
+          <p>
+            This AI model will help you in identifying the detection of
+            landslide from the image uploaded.
+          </p>
+        </div>
+        <div class="form-container">
+          <h1>Upload an Image for Land Slide Detection</h1>
+          <form
+            action="{{ url_for('predict') }}"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="custom-file-upload">
+              <label for="imageUpload">
+                <i class="fa fa-upload"></i> Upload Image
+              </label>
+              <input
+                type="file"
+                id="imageUpload"
+                name="image"
+                accept="image/*"
+                required
+                onchange="previewImage(event)"
+              />
+            </div>
+            <button
+              type="button"
+              id="viewImageButton"
+              class="button"
+              onclick="viewImage()"
+              style="display: none"
+            >
+              View Image
+            </button>
+            <button type="submit" class="button">Predict</button>
+          </form>
+          <div id="imagePreviewContainer" style="display: none">
+            <h2>Image Preview</h2>
+            <img
+              id="imagePreview"
+              alt="Uploaded Image Preview"
+              class="result-image"
+              Fpredict
+            />
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <p>&copy; 2024 Land Slide Detection. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      function previewImage(event) {
+        const viewImageButton = document.getElementById("viewImageButton");
+        viewImageButton.style.display = "block";
+      }
+
+      function viewImage() {
+        const fileInput = document.getElementById("imageUpload");
+        const imagePreviewContainer = document.getElementById(
+          "imagePreviewContainer"
+        );
+        const imagePreview = document.getElementById("imagePreview");
+
+        if (fileInput.files && fileInput.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+            imagePreviewContainer.style.display = "block";
+          };
+          reader.readAsDataURL(fileInput.files[0]);
+        }
+      }
+    </script>
+  </body>
+</html>

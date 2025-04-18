@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Land Slide Detection</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='about.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="nav-list1">
+            <li>
+              <p style="font-size: 20px">Land Slide Detection</p>
+            </li>
+          </ul>
+          <ul class="nav-list">
+            <li>
+              <a
+                href="{{ url_for('home') }}"
+                class="nav-link"
+                style="font-size: 20px"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ url_for('contact') }}"
+                class="nav-link"
+                style="font-size: 20px"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="abouts">
+        <h3>About Land Slide Detection</h3>
+        <p>
+          The Landslide Detection project aims to accurately identify and
+          predict potential landslide occurrences using advanced machine
+          learning and geospatial analysis techniques. This initiative leverages
+          the power of deep learning and remote sensing to analyze terrain,
+          environmental conditions, and historical data, enabling users to
+          assess landslide risks effectively. By employing convolutional neural
+          networks (CNNs) and other advanced models trained on a diverse dataset
+          of satellite images, topographic maps, and environmental factors, the
+          system can detect and classify landslide-prone areas with high
+          accuracy. When data such as satellite imagery or geospatial maps is
+          provided, the system utilizes sophisticated algorithms to analyze
+          features like soil composition, slope stability, vegetation cover, and
+          rainfall patterns. The deep learning models are designed to identify
+          subtle patterns and anomalies that signal potential landslide risks.
+          This enables precise detection and prediction, providing timely
+          feedback to aid in disaster prevention and risk mitigation. The
+          detection process is efficient, offering actionable insights that help
+          communities and authorities prepare for and respond to landslide
+          threats effectively.
+        </p>
+        <p>
+          Once geospatial data, such as satellite imagery or topographic maps,
+          is uploaded, the system uses advanced algorithms to analyze terrain
+          features and environmental conditions. The deep learning models are
+          specifically trained to detect subtle patterns, such as changes in
+          soil composition, slope stability, vegetation cover, and rainfall
+          impact, enabling accurate landslide detection. This analysis is
+          performed swiftly, delivering real-time feedback to users, helping
+          them assess risks and take proactive measures to mitigate the impact
+          of potential landslides.
+        </p>
+        <div class="image-grid-container">
+          <h3>Major Land Slides</h3>
+          <div class="image-grid">
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/img2.jpeg') }}"
+                alt="Alternaria solani"
+              />
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/img3.jpeg') }}"
+                alt="Bacterial Canker"
+              />
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/img4.jpeg') }}"
+                alt="Bacterial spot"
+              />
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/img5.jpeg') }}"
+                alt="EarlyBlight"
+              />
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/img6.jpeg') }}"
+                alt="Gray spot"
+              />
+            </div>
+            <div class="image-item">
+              <img
+                src="{{ url_for('static', filename='images/img7.jpeg') }}"
+                alt="Leaf curl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Land Slide Detection. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
