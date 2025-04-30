@@ -37,7 +37,7 @@ Follow the steps below to get started with this project:
 
 ```bash
 git clone https://github.com/Vejandlachakrish/LandSlide-Detection-Using-Hybridmodel-Resnet50-VGG19.git
-
+```
 ### 2. Navigate to the project directory
 
 ```bash
