@@ -33,18 +33,18 @@ The repository contains the following files and directories:
 
 Follow the steps below to get started with this project:
 
-### 1. Clone the repository
+1. Clone the repository
 
 ```bash
 git clone https://github.com/Vejandlachakrish/LandSlide-Detection-Using-Hybridmodel-Resnet50-VGG19.git
 ```
-### 2. Navigate to the project directory
+ 2. Navigate to the project directory
 
 ```bash
 cd LandSlide-Detection-Using-Hybridmodel-Resnet50-VGG19
 ```
 
-### 3. Install the required dependencies
+3. Install the required dependencies
 
 Before you run the application, you need to install the required Python dependencies. You can do this by running:
 
@@ -52,7 +52,7 @@ Before you run the application, you need to install the required Python dependen
 pip install -r requirements.txt
 ```
 
-### 4. Run the application
+4. Run the application
 
 To launch the web application for real-time landslide detection, run:
 
