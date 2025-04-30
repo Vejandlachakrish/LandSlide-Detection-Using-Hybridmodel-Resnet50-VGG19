@@ -1,4 +1,4 @@
-```markdown
+
 # Landslide Detection Using Hybrid Model: ResNet50 + VGG19
 
 This project demonstrates a **Landslide Detection** system using a **Hybrid Deep Learning Model** combining **ResNet50** and **VGG19** architectures. The goal is to identify and classify landslide-prone regions from satellite imagery, enhancing environmental monitoring and disaster management capabilities.
@@ -37,7 +37,6 @@ Follow the steps below to get started with this project:
 
 ```bash
 git clone https://github.com/Vejandlachakrish/LandSlide-Detection-Using-Hybridmodel-Resnet50-VGG19.git
-```
 
 ### 2. Navigate to the project directory
 
